@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>إنتل: الاستدامة عبر العصور</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -34,7 +35,7 @@
     <article class="timeline-card">
       <h2>1968</h2>
       <h3>تأسيس إنتل</h3>
-      <div class="image-box" tabindex="0">
+      <div class="image-box" tabindex="0" aria-label="معلومات إضافية عن تأسيس إنتل عام 1968">
         <img src="img/1.jpg" alt="رسم توضيحي لتأسيس إنتل عام 1968" />
         <p class="overlay">
         أعاد روبرت نويس وغوردون مور تسمية الشركة الناشئة NM Electronics 
@@ -47,7 +48,7 @@
     <article class="timeline-card">
       <h2>1971</h2>
       <h3>أول معالج دقيق</h3>
-      <div class="image-box" tabindex="0">
+      <div class="image-box" tabindex="0" aria-label="معلومات إضافية عن أول معالج دقيق عام 1971">
         <img src="img/2.jpg" alt="رسم قريب لمعالج دقيق من إنتل" />
         <p class="overlay">
         أطلقت إنتل 4004، أول معالج دقيق تجاري في العالم، فأشعلت ثورة المعالجات 
@@ -60,7 +61,7 @@
     <article class="timeline-card">
       <h2>1978</h2>
       <h3>معالج 8086</h3>
-      <div class="image-box" tabindex="0">
+      <div class="image-box" tabindex="0" aria-label="معلومات إضافية عن معالج 8086 عام 1978">
         <img src="img/3.jpg" alt="رسم توضيحي لمعالج إنتل 8086" />
         <p class="overlay">
         إطلاق معالج 8086، الذي أرسى بنية x86 المستخدمة في عدد لا يحصى 
@@ -73,7 +74,7 @@
     <article class="timeline-card">
       <h2>1985</h2>
       <h3>معالج 386</h3>
-      <div class="image-box" tabindex="0">
+      <div class="image-box" tabindex="0" aria-label="معلومات إضافية عن معالج 386 عام 1985">
         <img src="img/4.jpg" alt="رسم توضيحي لمعالج إنتل 386" />
         <p class="overlay">
         قدّمت إنتل معالج 386 ذي البنية 32 بت، فبدأ عصر جديد من الأداء 
@@ -142,22 +143,67 @@
     <div class="intel-info-heading">
       <h2 id="intel-info-title">التزامات إنتل بالاستدامة</h2>
     </div>
-    <div class="intel-info-columns">
-      <article class="intel-info-card">
-        <h3><span class="card-icon" aria-hidden="true">🌍</span>استراتيجية RISE</h3>
-        <p>ضمن استراتيجية RISE (المسؤولة والشاملة والمستدامة والتمكينية)، وضعت إنتل أهدافاً طموحة لعام 2030، تشمل دفع التقدم على مستوى القطاع في العمل المناخي وإدارة المياه والحد من النفايات.</p>
-        <a class="info-button" href="#newsletter">معرفة المزيد</a>
-      </article>
-      <article class="intel-info-card">
-        <h3><span class="card-icon" aria-hidden="true">🌳</span>الالتزام</h3>
-        <p>في عام 2022، التزمت إنتل بتحقيق صافي انبعاثات صفري من الغازات الدفيئة (النطاقان 1 و2) بحلول عام 2040. ويستند هذا الالتزام إلى عقود من المبادرات البيئية والشراكات في قطاع أشباه الموصلات.</p>
-        <a class="info-button" href="#newsletter">معرفة المزيد</a>
-      </article>
-      <article class="intel-info-card">
-        <h3><span class="card-icon" aria-hidden="true">💧</span>المياه والنفايات</h3>
-        <p>تحافظ إنتل على مليارات الغالونات من المياه سنوياً وتتعاون مع المجتمعات المحلية لاستعادة أحواض المياه. كما تعيد إنتل تدوير المواد للحد من النفايات وتعزيز الاقتصاد الدائري.</p>
-        <a class="info-button" href="#newsletter">معرفة المزيد</a>
-      </article>
+    <div class="row g-4 commitment-modal-grid">
+      <div class="col-md-4">
+        <button class="intel-info-card commitment-trigger" type="button" data-bs-toggle="modal" data-bs-target="#riseModal" aria-label="فتح تفاصيل استراتيجية RISE">
+          <span class="commitment-trigger-title"><span class="card-icon" aria-hidden="true">🌍</span>استراتيجية RISE</span>
+          <span class="commitment-trigger-action">عرض التفاصيل</span>
+        </button>
+      </div>
+      <div class="col-md-4">
+        <button class="intel-info-card commitment-trigger" type="button" data-bs-toggle="modal" data-bs-target="#commitmentModal" aria-label="فتح تفاصيل التزام إنتل">
+          <span class="commitment-trigger-title"><span class="card-icon" aria-hidden="true">🌳</span>الالتزام</span>
+          <span class="commitment-trigger-action">عرض التفاصيل</span>
+        </button>
+      </div>
+      <div class="col-md-4">
+        <button class="intel-info-card commitment-trigger" type="button" data-bs-toggle="modal" data-bs-target="#waterModal" aria-label="فتح تفاصيل المياه والنفايات">
+          <span class="commitment-trigger-title"><span class="card-icon" aria-hidden="true">💧</span>المياه والنفايات</span>
+          <span class="commitment-trigger-action">عرض التفاصيل</span>
+        </button>
+      </div>
+    </div>
+    <div class="modal fade" id="riseModal" tabindex="-1" aria-labelledby="riseModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content commitment-modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="riseModalTitle"><span class="card-icon" aria-hidden="true">🌍</span>استراتيجية RISE</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+          </div>
+          <div class="modal-body">
+            <p>ضمن استراتيجية RISE (المسؤولة والشاملة والمستدامة والتمكينية)، وضعت إنتل أهدافاً طموحة لعام 2030، تشمل دفع التقدم على مستوى القطاع في العمل المناخي وإدارة المياه والحد من النفايات.</p>
+            <a class="info-button" href="#newsletter" aria-label="معرفة المزيد عن استراتيجية RISE">معرفة المزيد</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="commitmentModal" tabindex="-1" aria-labelledby="commitmentModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content commitment-modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="commitmentModalTitle"><span class="card-icon" aria-hidden="true">🌳</span>الالتزام</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+          </div>
+          <div class="modal-body">
+            <p>في عام 2022، التزمت إنتل بتحقيق صافي انبعاثات صفري من الغازات الدفيئة (النطاقان 1 و2) بحلول عام 2040. ويستند هذا الالتزام إلى عقود من المبادرات البيئية والشراكات في قطاع أشباه الموصلات.</p>
+            <a class="info-button" href="#newsletter" aria-label="معرفة المزيد عن التزام إنتل">معرفة المزيد</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="waterModal" tabindex="-1" aria-labelledby="waterModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content commitment-modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="waterModalTitle"><span class="card-icon" aria-hidden="true">💧</span>المياه والنفايات</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+          </div>
+          <div class="modal-body">
+            <p>تحافظ إنتل على مليارات الغالونات من المياه سنوياً وتتعاون مع المجتمعات المحلية لاستعادة أحواض المياه. كما تعيد إنتل تدوير المواد للحد من النفايات وتعزيز الاقتصاد الدائري.</p>
+            <a class="info-button" href="#newsletter" aria-label="معرفة المزيد عن المياه والنفايات">معرفة المزيد</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <section id="newsletter" class="newsletter" aria-labelledby="newsletter-title">
@@ -183,5 +229,7 @@
   <footer class="site-footer">
     <p>&copy; 2026 شركة إنتل. جميع الحقوق محفوظة.</p>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
